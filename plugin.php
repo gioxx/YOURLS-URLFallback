@@ -3,7 +3,7 @@
 Plugin Name: YOURLS URL Fallback
 Plugin URI: https://github.com/gioxx/YOURLS-URLFallback
 Description: Redirect visitors to a configurable fallback URL when they hit a non-existent short URL or the YOURLS root page.
-Version: 1.0.0
+Version: 1.0.1
 Author: Gioxx
 Author URI: https://gioxx.org
 Text Domain: yourls-url-fallback
@@ -12,7 +12,7 @@ Domain Path: /languages
 
 if ( !defined( 'YOURLS_ABSPATH' ) ) die();
 
-define( 'URL_FALLBACK_VERSION', '1.0.0' );
+define( 'URL_FALLBACK_VERSION', '1.0.1' );
 define( 'URL_FALLBACK_GITHUB_API', 'https://api.github.com/repos/gioxx/YOURLS-URLFallback/releases/latest' );
 define( 'URL_FALLBACK_GITHUB_URL', 'https://github.com/gioxx/YOURLS-URLFallback/releases/latest' );
 
@@ -268,7 +268,7 @@ function url_fallback_print_admin_style() {
 .uf-row:last-child{ margin-bottom:0; }
 .uf-row label     { display:block; font-weight:700; margin-bottom:2px; color:#26323a; font-size:.84rem; }
 .uf-row small     { display:block; color:#667885; margin-bottom:7px; font-size:.73rem; }
-.uf-row input[type="text"] { width:100%; max-width:100%; height:32px; border:1px solid #c7d8e4; border-radius:8px; padding:0 9px; background:#fff; color:#26323a; }
+.uf-row input[type="text"] { width:100%; max-width:100%; height:32px; border:1px solid #c7d8e4; border-radius:8px; padding:0 9px; background:#fff; color:#26323a; box-sizing:border-box; }
 .uf-radio-group   { display:flex; flex-direction:column; gap:6px; }
 .uf-radio-group label { font-weight:normal; display:flex; align-items:center; gap:6px; font-size:.84rem; }
 .uf-info-box      { background:#f5fbfe; border-left:4px solid #4ea1cf; border-radius:0 8px 8px 0; padding:8px 12px; margin-bottom:18px; }

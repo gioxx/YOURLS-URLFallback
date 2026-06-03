@@ -18,18 +18,21 @@ function url_fallback_intercept() {
     // yourls_get_request() returns the keyword (e.g. "foo") or empty string for root.
     $keyword = function_exists( 'yourls_get_request' ) ? yourls_get_request() : '';
 
-    // "abc+" is YOURLS native stats page — always let it through.
-    if ( $keyword && substr( $keyword, -1 ) === '+' ) {
-        return;
-    }
-
     // Root URL: yield to AlternativeIndex if it is active.
     if ( $keyword === '' && url_fallback_is_alternative_index_active() ) {
         return;
     }
 
-    // If there is a keyword, check whether it actually exists in the DB.
-    if ( $keyword && yourls_get_keyword_longurl( $keyword ) ) {
+    // "abc+" is YOURLS stats page — let it through only if the keyword exists.
+    if ( $keyword && substr( $keyword, -1 ) === '+' ) {
+        if ( yourls_get_keyword_longurl( substr( $keyword, 0, -1 ) ) ) {
+            return;
+        }
+        // Non-existent keyword + "+": fall through to fallback redirect.
+    }
+
+    // If there is a keyword (no "+"), check whether it actually exists in the DB.
+    if ( $keyword && substr( $keyword, -1 ) !== '+' && yourls_get_keyword_longurl( $keyword ) ) {
         return;
     }
 

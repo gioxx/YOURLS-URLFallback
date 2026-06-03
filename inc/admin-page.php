@@ -58,8 +58,8 @@ function url_fallback_config_page() {
     }
 
     if ( $ai_active ) {
-        echo '<div class="uf-compat-notice uf-compat-notice--ok">';
-        echo '<strong>&#9989; AlternativeIndex detected &amp; active</strong><br>';
+        echo '<div class="uf-compat-notice uf-compat-notice--info">';
+        echo '<strong>&#8505;&#65039; AlternativeIndex detected &amp; active</strong><br>';
         echo 'The root page (<code>/</code>) is managed by <strong>AlternativeIndex</strong>. ';
         echo 'URL Fallback will only redirect visitors hitting <strong>unknown short URLs</strong> &mdash; ';
         echo 'root page interception is automatically disabled to avoid conflicts.';
@@ -102,7 +102,7 @@ function url_fallback_config_page() {
     if ( !$ai_active ) echo ' and when visiting the <strong>YOURLS root URL</strong> directly';
     echo '.</li>';
     echo '<li>Valid short URLs continue to work without any change.</li>';
-    echo '<li>Short URLs ending with <strong>+</strong> (YOURLS stats pages) are always passed through normally.</li>';
+    echo '<li>Short URLs ending with <strong>+</strong> (YOURLS stats pages) are passed through only if the keyword exists; otherwise the fallback redirect applies.</li>';
     if ( $ai_active ) {
         echo '<li><strong>AlternativeIndex</strong> is active: the root page is handled by that plugin and URL Fallback will not intercept it.</li>';
     }

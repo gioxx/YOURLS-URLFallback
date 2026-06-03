@@ -139,10 +139,10 @@
     font-size: .84rem;
     line-height: 1.5;
 }
-.uf-compat-notice--ok {
-    background: #eafaf0;
-    border-left: 4px solid #3da56a;
-    color: #1a4d30;
+.uf-compat-notice--info {
+    background: #f5fbfe;
+    border-left: 4px solid #4ea1cf;
+    color: #26323a;
 }
 .uf-compat-notice code {
     background: rgba(0,0,0,.06);

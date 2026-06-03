@@ -12,10 +12,11 @@ Valid short URLs continue to work normally — no interference with your existin
 
 - **Automatic fallback redirect** for unknown short URL keywords and the YOURLS root page
 - **Choice of redirect type**: 301 Permanent or 302 Temporary
-- **Stats pages unaffected**: URLs ending with `+` (native YOURLS stats) are always passed through normally
+- **Stats pages respected**: URLs ending with `+` are passed through only when the keyword actually exists; unknown `keyword+` requests are redirected to the fallback like any other unknown keyword
+- **AlternativeIndex compatible**: when [YOURLS AlternativeIndex](https://github.com/gioxx/YOURLS-AlternativeIndex) is active, root page interception is automatically disabled — both plugins coexist without conflicts, and the admin page shows a compatibility notice
 - **Instant disable**: leave the fallback URL empty to restore default YOURLS behavior
 - **Update notifications**: checks GitHub for new releases and shows a badge in the admin panel
-- **Simple single-file plugin** — no composer, no npm, no build step
+- **Modular structure**: split into `inc/` modules and static `assets/`, no composer, no npm, no build step
 
 ---
 
@@ -48,7 +49,9 @@ Valid short URLs continue to work normally — no interference with your existin
 | Valid short URL (e.g. `/abc`) | YOURLS handles it normally |
 | Unknown keyword (e.g. `/xyz`) | Redirected to fallback URL |
 | YOURLS root page (`/`) | Redirected to fallback URL |
-| Stats page (e.g. `/abc+`) | YOURLS handles it normally |
+| YOURLS root page (`/`) with AlternativeIndex active | AlternativeIndex handles it |
+| Stats page of existing keyword (e.g. `/abc+`) | YOURLS handles it normally |
+| Stats page of unknown keyword (e.g. `/xyz+`) | Redirected to fallback URL |
 | No fallback URL configured | Default YOURLS behavior (404 page) |
 
 ### Disabling the plugin without deactivating

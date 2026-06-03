@@ -23,24 +23,30 @@ function url_fallback_intercept() {
         return;
     }
 
-    // "abc+" is YOURLS stats page — let it through only if the keyword exists.
+    // "abc+" stats page: let it through only when the base keyword exists.
+    // For non-existent keywords, YOURLS fires load_template_404 (not load_template_infos),
+    // so we must intercept here before YOURLS routes the request.
     if ( $keyword && substr( $keyword, -1 ) === '+' ) {
         if ( yourls_get_keyword_longurl( substr( $keyword, 0, -1 ) ) ) {
-            return;
+            return; // keyword exists — let YOURLS show the stats page
         }
-        // Non-existent keyword + "+": fall through to fallback redirect.
+        url_fallback_do_redirect();
     }
 
-    // If there is a keyword (no "+"), check whether it actually exists in the DB.
-    if ( $keyword && substr( $keyword, -1 ) !== '+' && yourls_get_keyword_longurl( $keyword ) ) {
+    // If there is a keyword, check whether it actually exists in the DB.
+    if ( $keyword && yourls_get_keyword_longurl( $keyword ) ) {
         return;
     }
 
+    url_fallback_do_redirect();
+}
+
+function url_fallback_do_redirect() {
+    $fallback_url  = yourls_get_option( 'url_fallback_url' );
     $redirect_type = (int) yourls_get_option( 'url_fallback_redirect_type' );
     if ( !in_array( $redirect_type, [ 301, 302 ], true ) ) {
         $redirect_type = 302;
     }
-
     header( 'Location: ' . yourls_esc_url( $fallback_url ), true, $redirect_type );
     die();
 }

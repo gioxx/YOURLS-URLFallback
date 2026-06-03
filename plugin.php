@@ -3,7 +3,7 @@
 Plugin Name: YOURLS URL Fallback
 Plugin URI: https://github.com/gioxx/YOURLS-URLFallback
 Description: Redirect visitors to a configurable fallback URL when they hit a non-existent short URL or the YOURLS root page.
-Version: 1.1.0
+Version: 1.2.0
 Author: Gioxx
 Author URI: https://gioxx.org
 Text Domain: yourls-url-fallback
@@ -12,7 +12,7 @@ Domain Path: /languages
 
 if ( !defined( 'YOURLS_ABSPATH' ) ) die();
 
-define( 'URL_FALLBACK_VERSION',    '1.1.0' );
+define( 'URL_FALLBACK_VERSION',    '1.2.0' );
 define( 'URL_FALLBACK_GITHUB_API', 'https://api.github.com/repos/gioxx/YOURLS-URLFallback/releases/latest' );
 define( 'URL_FALLBACK_GITHUB_URL', 'https://github.com/gioxx/YOURLS-URLFallback' );
 define( 'URL_FALLBACK_PLUGIN_DIR', dirname( __FILE__ ) );

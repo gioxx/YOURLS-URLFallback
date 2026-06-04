@@ -1,13 +1,125 @@
 # YOURLS URL Fallback — translation template
-# Copyright (C) 2025 Gioxx
+# Copyright (C) 2026 Gioxx
 # This file is distributed under the same license as the YOURLS URL Fallback plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: YOURLS URL Fallback 1.1.0\n"
+"Project-Id-Version: YOURLS URL Fallback 1.1.2\n"
 "Report-Msgid-Bugs-To: https://github.com/gioxx/YOURLS-URLFallback/issues\n"
-"POT-Creation-Date: 2026-06-03\n"
+"POT-Creation-Date: 2026-06-04\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Domain: yourls-url-fallback\n"
+
+#: inc/admin-page.php
+msgid "Are you sure you want to reset all settings?"
+msgstr ""
+
+#: inc/admin-page.php
+msgid "Settings reset to default."
+msgstr ""
+
+#: inc/admin-page.php
+msgid "URL Fallback"
+msgstr ""
+
+#: inc/admin-page.php
+msgid "detected &amp; active"
+msgstr ""
+
+#: inc/admin-page.php
+msgid "The root page (<code>/</code>) is managed by <strong>AlternativeIndex</strong>. URL Fallback will only redirect visitors hitting <strong>unknown short URLs</strong> &mdash; root page interception is automatically disabled to avoid conflicts."
+msgstr ""
+
+#: inc/admin-page.php
+msgid "Fallback Settings"
+msgstr ""
+
+#: inc/admin-page.php
+msgid "Fallback URL"
+msgstr ""
+
+#: inc/admin-page.php
+msgid "Visitors hitting a missing short URL will be redirected here."
+msgstr ""
+
+#: inc/admin-page.php
+msgid "Visitors hitting a missing short URL or the YOURLS root page will be redirected here."
+msgstr ""
+
+#: inc/admin-page.php
+msgid "Redirect Type"
+msgstr ""
+
+#: inc/admin-page.php
+msgid "Use 302 while testing, switch to 301 once the destination is stable (301 is cached by browsers)."
+msgstr ""
+
+#: inc/admin-page.php
+msgid "302 &ndash; Temporary Redirect"
+msgstr ""
+
+#: inc/admin-page.php
+msgid "301 &ndash; Permanent Redirect"
+msgstr ""
+
+#: inc/admin-page.php
+msgid "Notes"
+msgstr ""
+
+#: inc/admin-page.php
+msgid "When <strong>no fallback URL is set</strong>, YOURLS behaves as normal (default 404 page)."
+msgstr ""
+
+#: inc/admin-page.php
+msgid "The redirect fires for <strong>any unknown keyword</strong>."
+msgstr ""
+
+#: inc/admin-page.php
+msgid "The redirect fires for <strong>any unknown keyword</strong> and when visiting the <strong>YOURLS root URL</strong> directly."
+msgstr ""
+
+#: inc/admin-page.php
+msgid "Valid short URLs continue to work without any change."
+msgstr ""
+
+#: inc/admin-page.php
+msgid "Short URLs ending with <strong>+</strong> (YOURLS stats pages) are passed through only if the keyword exists; otherwise the fallback redirect applies."
+msgstr ""
+
+#: inc/admin-page.php
+msgid "<strong>AlternativeIndex</strong> is active: the root page is handled by that plugin and URL Fallback will not intercept it."
+msgstr ""
+
+#: inc/admin-page.php
+msgid "Save Settings"
+msgstr ""
+
+#: inc/admin-page.php
+msgid "Reset to Default"
+msgstr ""
+
+#: inc/admin-page.php
+msgid "Back to top"
+msgstr ""
+
+#: inc/admin-page.php
+msgid "Please enter a valid URL (e.g. https://example.com or www.example.com)."
+msgstr ""
+
+#: inc/admin-page.php
+msgid "Settings saved successfully!"
+msgstr ""
+
+#: inc/update-check.php
+msgid "New version available: <strong>%s</strong>!"
+msgstr ""
+
+#: inc/update-check.php
+msgid "View details on GitHub"
+msgstr ""
+
+#: inc/update-check.php
+msgid "Update Available"
+msgstr ""

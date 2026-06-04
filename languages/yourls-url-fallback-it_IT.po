@@ -101,7 +101,7 @@ msgstr "Salva Impostazioni"
 
 #: inc/admin-page.php
 msgid "Reset to Default"
-msgstr "Ripristina Predefiniti"
+msgstr "Ripristina impostazioni predefinite"
 
 #: inc/admin-page.php
 msgid "Back to top"

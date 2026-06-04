@@ -63,7 +63,7 @@ function url_fallback_config_page() {
     url_fallback_show_update_notice();
 
     echo '<div class="uf-header">';
-    echo '<h2 class="uf-title">&#8618; <span class="uf-title-text">' . yourls__( 'URL Fallback', 'yourls-url-fallback' ) . '</span></h2>';
+    echo '<h2 class="uf-title">&#8618; <span class="uf-title-text">URL Fallback</span></h2>';
     echo '<p class="uf-version">Version ' . URL_FALLBACK_VERSION . '</p>';
     echo '</div>';
 
@@ -140,7 +140,7 @@ function url_fallback_config_page() {
     echo '<div class="plugin-footer">';
     echo '<div class="plugin-footer-top">';
     echo '<span>';
-    echo '<a href="https://yourls.gioxx.org/plugins/url-fallback" target="_blank" rel="noopener noreferrer">&#8618; ' . yourls__( 'URL Fallback', 'yourls-url-fallback' ) . '</a>';
+    echo '<a href="https://yourls.gioxx.org/plugins/url-fallback" target="_blank" rel="noopener noreferrer">&#8618; URL Fallback</a>';
     echo '&nbsp;&middot;&nbsp;';
     echo '<img src="https://github.githubassets.com/favicons/favicon.png" class="github-icon" alt="" />';
     echo '<a href="' . URL_FALLBACK_GITHUB_URL . '" target="_blank" rel="noopener noreferrer">GitHub</a>';

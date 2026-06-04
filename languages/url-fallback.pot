@@ -20,7 +20,7 @@ msgstr ""
 msgid "Settings reset to default."
 msgstr ""
 
-#: inc/admin-page.php
+#: plugin.php
 msgid "URL Fallback"
 msgstr ""
 

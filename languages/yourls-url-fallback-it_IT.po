@@ -23,7 +23,7 @@ msgstr "Sei sicuro di voler reimpostare tutte le impostazioni?"
 msgid "Settings reset to default."
 msgstr "Impostazioni ripristinate ai valori predefiniti."
 
-#: inc/admin-page.php
+#: plugin.php
 msgid "URL Fallback"
 msgstr "URL alternativo"
 

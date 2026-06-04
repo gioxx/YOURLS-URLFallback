@@ -25,7 +25,7 @@ msgstr "Impostazioni ripristinate ai valori predefiniti."
 
 #: inc/admin-page.php
 msgid "URL Fallback"
-msgstr "URL Fallback"
+msgstr "URL alternativo"
 
 #: inc/admin-page.php
 msgid "detected &amp; active"

@@ -1,20 +1,42 @@
 <?php
 
 function url_fallback_get_update_info() {
-    static $fetched  = false;
-    static $info     = null;
+    static $fetched = false;
+    static $info    = null;
 
-    if ( !$fetched ) {
-        $fetched  = true;
-        $response = url_fallback_remote_get( URL_FALLBACK_GITHUB_API );
-        if ( $response && isset( $response['tag_name'] ) ) {
-            $latest = ltrim( $response['tag_name'], 'v' );
-            $info   = [
-                'latest_version'   => $latest,
-                'update_available' => version_compare( $latest, URL_FALLBACK_VERSION, '>' ),
-                'release_url'      => $response['html_url'] ?? '',
-            ];
-        }
+    if ( $fetched ) return $info;
+    $fetched = true;
+
+    $cached = yourls_get_option( 'url_fallback_update_cache' );
+
+    if (
+        is_array( $cached )
+        && !empty( $cached['checked_at'] )
+        && !empty( $cached['latest_version'] )
+        && ( time() - (int) $cached['checked_at'] ) < 86400
+    ) {
+        $info = [
+            'latest_version'   => $cached['latest_version'],
+            'update_available' => version_compare( $cached['latest_version'], URL_FALLBACK_VERSION, '>' ),
+            'release_url'      => $cached['release_url'] ?? '',
+        ];
+        return $info;
+    }
+
+    $response = url_fallback_remote_get( URL_FALLBACK_GITHUB_API );
+    if ( $response && isset( $response['tag_name'] ) ) {
+        $latest      = ltrim( $response['tag_name'], 'v' );
+        $release_url = $response['html_url'] ?? '';
+        yourls_update_option( 'url_fallback_update_cache', [
+            'checked_at'     => time(),
+            'latest_version' => $latest,
+            'release_url'    => $release_url,
+        ] );
+        $info = [
+            'latest_version'   => $latest,
+            'update_available' => version_compare( $latest, URL_FALLBACK_VERSION, '>' ),
+            'release_url'      => $release_url,
+        ];
     }
 
     return $info;

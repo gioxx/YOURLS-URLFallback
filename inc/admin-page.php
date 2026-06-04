@@ -1,6 +1,5 @@
 <?php
 
-yourls_add_action( 'plugins_loaded', 'url_fallback_load_textdomain' );
 function url_fallback_load_textdomain() {
     $locale = yourls_get_locale();
     $domain = 'yourls-url-fallback';

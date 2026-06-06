@@ -64,7 +64,7 @@ function url_fallback_config_page() {
 
     echo '<div class="uf-header">';
     echo '<h2 class="uf-title">&#8618; <span class="uf-title-text">URL Fallback</span></h2>';
-    echo '<p class="uf-version">Version ' . URL_FALLBACK_VERSION . '</p>';
+    echo '<p class="plugin-version">' . yourls__( 'Version: ', 'yourls-url-fallback' ) . URL_FALLBACK_VERSION . '</p>';
     echo '</div>';
 
     foreach ( $messages as $msg ) {

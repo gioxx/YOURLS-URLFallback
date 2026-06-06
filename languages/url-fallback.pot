@@ -93,6 +93,10 @@ msgid "<strong>AlternativeIndex</strong> is active: the root page is handled by 
 msgstr ""
 
 #: inc/admin-page.php
+msgid "Version: "
+msgstr ""
+
+#: inc/admin-page.php
 msgid "Save Settings"
 msgstr ""
 

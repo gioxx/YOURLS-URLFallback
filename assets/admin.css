@@ -20,10 +20,10 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.uf-version {
-    margin: 0;
-    font-size: .76rem;
-    color: #667885;
+.plugin-version {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 4px;
 }
 
 /* Panel */

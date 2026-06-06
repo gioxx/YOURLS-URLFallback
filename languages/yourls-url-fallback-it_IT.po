@@ -96,6 +96,10 @@ msgid "<strong>AlternativeIndex</strong> is active: the root page is handled by 
 msgstr "<strong>AlternativeIndex</strong> è attivo: la pagina radice è gestita da quel plugin e URL Fallback non la intercetterà."
 
 #: inc/admin-page.php
+msgid "Version: "
+msgstr "Versione: "
+
+#: inc/admin-page.php
 msgid "Save Settings"
 msgstr "Salva Impostazioni"
 

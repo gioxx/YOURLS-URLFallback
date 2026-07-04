@@ -5,6 +5,7 @@ Valid short URLs continue to work normally — no interference with your existin
 
 [![Latest Release](https://img.shields.io/github/v/release/gioxx/YOURLS-URLFallback)](https://github.com/gioxx/YOURLS-URLFallback/releases)
 [![License](https://img.shields.io/github/license/gioxx/YOURLS-URLFallback)](LICENSE)
+[![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome)
 
 ---
 
@@ -87,7 +88,7 @@ This plugin is licensed under the [MIT License](LICENSE).
 
 ## 💬 About
 
-Lovingly developed by the usually-on-vacation brain cell of [Gioxx](https://github.com/gioxx), with assistance from Claude AI.
+Lovingly developed by the usually-on-vacation brain cell of [Gioxx](https://github.com/gioxx).
 
 ---
 
